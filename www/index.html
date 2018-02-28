@@ -21,16 +21,16 @@ Interaccion</button>
 <div id="Demo1" class="w3-hide">
 	<div class="w3-container">
 <label>Area Restriegue</label>
-<input class="w3-input " type="number" id="a" min="1" max="5" value="1">
+<input class="w3-input " type="number" id="a" min="0" max="5" value="0">
 
 <label>DistMax</label>
-<input class="w3-input" type="number" id="b" min="1" max="5" value="1">
+<input class="w3-input" type="number" id="b" min="0.1" max="5" value="2">
 
 <label>DisPiso</label>
-<input class="w3-input" type="number" id="c" min="1" max="5" value="1">
+<input class="w3-input" type="number" id="c" min="0" max="5" value="0">
 
 <label>FactorIntensión</label>
-<input class="w3-input" type="number" id="d" min="1" max="5" value="1">
+<input class="w3-input" type="number" id="d" min="0" max="1" value="0">
 
 </div>
 </div>
@@ -70,7 +70,7 @@ Fisico</button>
 <input class="w3-input" type="number" id="i" min="1" max="5" value="1">
 
 <label>volHuecoEspalda</label>
-<input class="w3-input" type="number" id="k" min="1" max="5" value="1">
+<input class="w3-input" type="number" id="k" min="0.1" max="5" value="1">
 
 </div>
 </div>
@@ -82,16 +82,16 @@ Poncho</button>
 <div id="Demo4" class="w3-hide">
 	<div class="w3-container">
 <label>izqC</label>
-<input class="w3-input " type="number" id="ic" min="1" max="5" value="1">
+<input class="w3-input " type="number" id="ic" min="0.1" max="5" value="1">
 
 <label>derC</label>
-<input class="w3-input " type="number" id="dc" min="1" max="5" value="1">
+<input class="w3-input " type="number" id="dc" min="0.1" max="5" value="1">
 
 <label>izqT</label>
-<input class="w3-input" type="number" id="it" min="1" max="5" value="1">
+<input class="w3-input" type="number" id="it" min="0.1" max="5" value="1">
 
 <label>derT</label>
-<input class="w3-input" type="number" id="dt" min="1" max="5" value="1">
+<input class="w3-input" type="number" id="dt" min="0.1" max="5" value="1">
 
 </div>
 </div>
@@ -120,12 +120,12 @@ Poncho</button>
 		var areaCuerpo = $('#e').val();
 		var areaRopa = $('#f').val();
 
-		var interaccion = (arearestriegue/(distMax-disPiso))*factorIntension;
+		var interaccion = (arearestriegue/distMax-(disPiso))*factorIntension;
 		var provocacion = areaCuerpo-areaRopa;
 
 		factor = interaccion*provocacion;
 
-		alert("El factor total el: "+factor);
+		alert("El factor total es: "+factor);
 	}
 
 	function nivelBuena() {
